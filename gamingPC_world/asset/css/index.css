@@ -1,0 +1,15 @@
+main>section>div>img{
+    width: 400px;
+    aspect-ratio: 1/1;
+    margin: 20px 0 0 0;
+}
+main>section>#login_form{
+    margin: 100px 0 0 300px;
+}
+main>section>div>#details>p{
+    margin-top: 20px;
+}
+main>section>div>h1{
+    margin-top: 10px;
+}
+

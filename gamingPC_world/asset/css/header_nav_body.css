@@ -1,0 +1,18 @@
+html * {
+    font-family:  'K2D', sans-serif;
+    color: white;
+}
+header *{
+    color:black;
+}
+header>nav>div>img{
+    width: 40px;
+    aspect-ratio: 1/1;
+    margin: 0 10px 0 100px;
+}
+body{
+    overflow-x: hidden;
+}
+header>nav>div>div>button{
+    margin-right: 100px;
+}
