@@ -1,0 +1,22 @@
+main>section>span>a{
+    margin-top: 1000px;
+}
+main>section>article>div>div{
+    margin-top: 100px;
+    height: 300px;
+    width: 300px;
+    background: url("../../asset/img/support.png") center;
+    background-size: cover;
+}
+main>section>article>div:nth-child(2)>div{
+    background: url("../../asset/img/experience.png") center;
+    background-size: cover;
+}
+main>section>article>div:nth-child(3)>div{
+    background: url("../../asset/img/badge.png") center;
+    background-size: cover;
+}
+main>section>article>div:nth-child(4)>div{
+    background: url("../../asset/img/warranty.png") center;
+    background-size: cover;
+}
