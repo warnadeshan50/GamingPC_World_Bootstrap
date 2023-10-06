@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="asset/css/header_nav_body.css">
     <link rel="stylesheet" href="asset/css/normalize.css">
+    <link rel="stylesheet" href="asset/css/pages_layout.css">
 </head>
 <body class="bg-black">
 <header>
@@ -41,6 +42,81 @@
         </div>
     </nav>
 </header>
+<main class="container-sm container-xl container-md">
+    <section>
+        <div>
+            <img src="asset/img/invoice.png" alt="Items">
+            <span class="text-center">Invoice</span>
+        </div>
+        <h6 class="bg-light text-black">Billing</h6>
+        <form class="row g-3 ">
+            <div class="col-md-4">
+                <label for="item_code" class="form-label col-sm-12 col-lg-4">Order ID</label>
+                <label id="item_code" class="form-label col-sm-12 col-lg-4">OR00001</label>
+            </div>
+            <br>
+            <div class="col-md-4 col-lg-4">
+                <label for="customer_ids" class="form-label col-sm-12 col-lg-4">Customer ID</label>
+                <select class="form-select bg-dark-subtle text-black col-sm-12 col-lg-4" aria-label="Default select example" id="customer_ids">
+                    <option selected>Choose</option>
+                    <option value="1">CU00001</option>
+                    <option value="2">CU00002</option>
+                    <option value="2">CU00003</option>
+                    <option value="2">CU00004</option>
+                    <option value="2">CU00005</option>
+                    <option value="2">CU00006</option>
+                </select>
+            </div>
+            <div class="col-md-4 labels">
+                <label for="customer_name" class="form-label col-sm-12 col-lg-4">Customer Name</label>
+                <label id="customer_name" class="form-label col-sm-12 col-lg-4">Mr.Nobody</label>
+            </div>
+            <div class="col-md-4 col-lg-4 ">
+                <label for="item_codes" class="form-label col-sm-12 col-lg-4">Item Code</label>
+                <select class="form-select bg-dark-subtle text-black col-sm-12 col-lg-4" aria-label="Default select example" id="item_codes">
+                    <option selected>Choose</option>
+                    <option value="1">IT00001</option>
+                    <option value="2">IT00002</option>
+                    <option value="2">IT00003</option>
+                    <option value="2">IT00004</option>
+                    <option value="2">IT00005</option>
+                    <option value="2">IT00006</option>
+                </select>
+            </div>
+            <div class="col-md-4 labels">
+                <label for="item" class="form-label col-sm-12 col-lg-4">Item</label>
+                <label id="item" class="form-label col-sm-12 col-lg-4">No Item Select Yet</label>
+            </div>
+            <div class="col-md-4 labels">
+                <label for="unit_price" class="form-label col-sm-12 col-lg-4">Unit Price Rs</label>
+                <label id="unit_price" class="form-label col-sm-12 col-lg-4">0000.00</label>
+            </div>
+            <div class="col-md-4">
+                <label for="qty" class="form-label">QTY</label>
+                <input type="number" class="form-control" id="qty" placeholder="00">
+            </div>
+            <div class="col-md-4 labels">
+                <label for="price" class="form-label col-sm-12 col-lg-4">Price Rs</label>
+                <label id="price" class="form-label col-sm-12 col-lg-4">0000.00</label>
+            </div>
+            <div class="col-md-4 labels">
+                <label for="net_price" class="form-label col-sm-12 col-lg-4">Net Price Rs</label>
+                <label id="net_price" class="form-label col-sm-12 col-lg-4">0000.00</label>
+            </div>
+            <div class="col-md-6">
+                <label for="cash" class="form-label">Cash Rs</label>
+                <input type="number" class="form-control" id="cash" placeholder="0000.00">
+            </div>
+            <div class="col-md-6 text-bottom labels">
+                <label for="balance" class="form-label col-sm-12 col-lg-4 ">Balance Rs</label>
+                <label id="balance" class="form-label col-sm-12 col-lg-4">0000.00</label>
+            </div>
+        </form>
+    </section>
+    <div class="row">
+        <span class="card-footer text-center">©copyright-GamingPC World-2023®</span>
+    </div>
+</main>
 <script src="asset/boostrap/bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>
 <script defer="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
