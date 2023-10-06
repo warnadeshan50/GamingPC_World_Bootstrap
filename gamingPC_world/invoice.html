@@ -92,27 +92,69 @@
                 <label for="unit_price" class="form-label col-sm-12 col-lg-4">Unit Price Rs</label>
                 <label id="unit_price" class="form-label col-sm-12 col-lg-4">0000.00</label>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <label for="qty" class="form-label">QTY</label>
                 <input type="number" class="form-control" id="qty" placeholder="00">
             </div>
-            <div class="col-md-4 labels">
+            <div class="col-md-3 labels">
                 <label for="price" class="form-label col-sm-12 col-lg-4">Price Rs</label>
                 <label id="price" class="form-label col-sm-12 col-lg-4">0000.00</label>
             </div>
-            <div class="col-md-4 labels">
+            <div class="col-md-3 labels">
                 <label for="net_price" class="form-label col-sm-12 col-lg-4">Net Price Rs</label>
                 <label id="net_price" class="form-label col-sm-12 col-lg-4">0000.00</label>
             </div>
-            <div class="col-md-6">
-                <label for="cash" class="form-label">Cash Rs</label>
-                <input type="number" class="form-control" id="cash" placeholder="0000.00">
+            <div class="col-md-3">
+                <button class="btn btn-primary" id="add_cart">Add to Cart</button>
             </div>
-            <div class="col-md-6 text-bottom labels">
+            <div class="col-md-4">
+                <label for="cash" class="form-label col-sm-12 col-lg-4">Cash Rs</label>
+                <input type="number" class="form-control col-sm-12 col-lg-4" id="cash" placeholder="0000.00">
+            </div>
+            <div class="col-md-4">
                 <label for="balance" class="form-label col-sm-12 col-lg-4 ">Balance Rs</label>
                 <label id="balance" class="form-label col-sm-12 col-lg-4">0000.00</label>
             </div>
         </form>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Item Code</th>
+                <th scope="col">Item</th>
+                <th scope="col">One Unit Price</th>
+                <th scope="col">QTY</th>
+                <th scope="col">Price</th>
+                <th scope="col">Remove</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">IT00001</th>
+                <td>4GB RAM</td>
+                <td>5000.00</td>
+                <td>2</td>
+                <td>10000.00</td>
+                <td><Button class="btn btn-warning"> Remove</Button></td>
+
+            </tr>
+            <tr>
+                <th scope="row">IT00006</th>
+                <td>1TB HARD</td>
+                <td>16000.00</td>
+                <td>1</td>
+                <td>16000.00</td>
+                <td><Button class="btn btn-warning"> Remove</Button></td>
+            </tr>
+            <tr>
+                <th scope="row">IT00020</th>
+                <td>Intel i7 12th gen Processor</td>
+                <td>50000.00</td>
+                <td>1</td>
+                <td>50000.00</td>
+                <td><Button class="btn btn-warning"> Remove</Button></td>
+            </tr>
+            </tbody>
+        </table>
     </section>
     <div class="row">
         <span class="card-footer text-center">©copyright-GamingPC World-2023®</span>
