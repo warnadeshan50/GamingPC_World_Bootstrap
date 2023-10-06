@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="asset/css/header_nav_body.css">
     <link rel="stylesheet" href="asset/css/normalize.css">
+    <link rel="stylesheet" href="asset/css/pages_layout.css">
+    <link rel="stylesheet" href="asset/css/search_new_update_delete_btn.css">
 </head>
 <body class="bg-black">
 <header>
@@ -41,6 +43,78 @@
         </div>
     </nav>
 </header>
+<main class="container-sm container-xl container-md">
+    <section>
+        <div>
+            <img src="asset/img/order.png" alt="Items">
+            <span class="text-center">Orders</span>
+        </div>
+        <h6 class="bg-light text-black">Order search</h6>
+        <form class="row g-3 ">
+            <div class="col-md-6">
+                <label for="order_id" class="form-label">Order ID</label>
+                <input type="text" class="form-control" id="order_id" placeholder="OR00000">
+            </div>
+            <br>
+            <div class="col-md-3" id="search_btn">
+                <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+            <div class="col-md-3" id="next-btn">
+                <button class="btn btn-success">+ New</button>
+                <button class="btn btn-secondary">Update</button>
+                <button class="btn btn-warning">Delete</button>
+            </div>
+            <div class="col-md-6">
+                <label for="item_code" class="form-label">Item Code</label>
+                <input type="text" class="form-control" id="item_code" placeholder="IT000000">
+            </div>
+            <div class="col-md-6">
+                <label for="price" class="form-label">Price</label>
+                <input type="number" class="form-control" id="price" placeholder="00000.00">
+
+            </div>
+            <div class="col-md-6">
+                <label for="date" class="form-label">Date</label>
+                <label id="date" class="form-label">2000/08/17</label>
+            </div>
+
+        </form>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Order ID</th>
+                <th scope="col">Item Code</th>
+                <th scope="col">Price</th>
+                <th scope="col">Date</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">OR00001</th>
+                <td>IT000001</td>
+                <td>200000.00</td>
+                <td>2023.09.03</td>
+
+            </tr>
+            <tr>
+                <th scope="row">OR00002</th>
+                <td>IT000003</td>
+                <td>90000.00</td>
+                <td>2023.09.05</td>
+            </tr>
+            <tr>
+                <th scope="row">OR00002</th>
+                <td>IT000002</td>
+                <td>8000.00</td>
+                <td>2023.09.07</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <div class="row">
+        <span class="card-footer text-center">©copyright-GamingPC World-2023®</span>
+    </div>
+</main>
 <script src="asset/boostrap/bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>
 <script defer="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
