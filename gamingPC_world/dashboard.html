@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <title>About GamingPC World</title>
     <meta name = "viewport" content="width=device-width,initial-scale1.0">
-    <link rel="stylesheet" href="asset/boostrap/bootstrap-5.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="asset/lib/boostrap/bootstrap-5.3.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="asset/lib/normalize.css">
+
     <link rel="stylesheet" href="asset/css/header_nav_body.css">
-    <link rel="stylesheet" href="asset/css/normalize.css">
+    <link rel="stylesheet" href="asset/css/invoice_page.css">
+    <link rel="stylesheet" href="asset/css/search_new_update_delete_btn.css">
+    <link rel="stylesheet" href="asset/css/pages_layout.css">
     <link rel="stylesheet" href="asset/css/dashboard.css">
 </head>
 <body class="bg-black">
@@ -22,19 +26,19 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center align-items-center fs-5 flex-grow-1">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="dashboard.html">About</a>
+                        <a class="nav-link active" aria-current="page" id="about_nav">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="customer.html">Customers</a>
+                        <a class="nav-link" id="customer_nav">Customers</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="item.html">Items</a>
+                        <a class="nav-link" id="item_nav">Items</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="order.html">Orders</a>
+                        <a class="nav-link" id="order_nav">Orders</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="invoice.html">Invoice</a>
+                        <a class="nav-link" id="invoice_nav">Invoice</a>
                     </li>
                 </ul>
                     <button class="btn btn-outline-warning" type="submit">Logout</button>
@@ -43,7 +47,8 @@
     </nav>
 </header>
 <main id="about" class="container">
-    <section class="row">
+<!--    dashboard-->
+    <section class="row" id="dashboard_section">
         <span class="text-center fs-1 "><a class="link-light" href="tel:+94762079221"></a>Contact:+94 76 207 9221</span>
         <article class="row">
             <div class="card bg-black col-sm-12 col-md-6 col-xl-3">
@@ -79,11 +84,361 @@
             </div>
         </article>
     </section>
+
+<!--    customer-->
+    <section id="customer_section">
+        <div>
+            <img src="asset/img/customer.png" alt="customers">
+            <span class="text-center">Customers</span>
+        </div>
+        <h6 class="bg-light text-black">Customer search</h6>
+        <form class="row g-3 ">
+            <div class="col-md-6">
+                <label for="customer_id" class="form-label">Customer ID</label>
+                <input type="text" class="form-control" id="customer_id" placeholder="CO00001">
+            </div>
+
+            <div class="col-md-3" id="cu_search_btn">
+                <button type="button" class="btn btn-primary">Search</button>
+            </div>
+            <div class="col-md-3" id="cu_next-btn">
+                <button type="button" class="btn btn-success">+ New</button>
+                <button type="button" class="btn btn-secondary">Update</button>
+                <button type="button" class="btn btn-warning">Delete</button>
+            </div>
+            <div class="col-md-6">
+                <label for="cu_customer_name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="cu_customer_name" placeholder="Mr. Enter Customer name">
+            </div>
+            <div class="col-md-6">
+                <label for="customer_address" class="form-label">Address</label>
+                <input type="text" class="form-control" id="customer_address" placeholder="Enter Address of Customer">
+            </div>
+            <div class="col-md-6">
+                <label for="customer_email" class="form-label">Email</label>
+                <input type="Email" class="form-control" id="customer_email" placeholder="example@email.com">
+            </div>
+            <div class="col-md-6">
+                <label for="customer_salary" class="form-label">Salary</label>
+                <input type="number" class="form-control" id="customer_salary" placeholder="Rs.00000.00">
+            </div>
+        </form>
+        <table class="table" id="customer_table">
+            <thead>
+            <tr>
+                <th scope="col">Customer ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Email</th>
+                <th scope="col">Salary</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">CO000001</th>
+                <td>Warna Deshan Silva</td>
+                <td>38/2 Railway Lane Kalutara North </td>
+                <td>warnadehan50@gmail.com</td>
+                <td>200000</td>
+            </tr>
+            <tr>
+                <th scope="row">CO000002</th>
+                <td>Warna Deshan Silva</td>
+                <td>38/2 Railway Lane Kalutara North </td>
+                <td>warnadehan50@gmail.com</td>
+                <td>200000</td>
+            </tr>
+            <tr>
+                <th scope="row">CO000003</th>
+                <td>Warna Deshan Silva</td>
+                <td>38/2 Railway Lane Kalutara North </td>
+                <td>warnadehan50@gmail.com</td>
+                <td>200000</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+<!--    item-->
+    <section id="item_section">
+        <div>
+            <img src="asset/img/items.png" alt="Items">
+            <span class="text-center">Items</span>
+        </div>
+        <h6 class="bg-light text-black">Item search</h6>
+        <form class="row g-3 ">
+            <div class="col-md-6">
+                <label for="it_item_code" class="form-label">Item Code</label>
+                <input type="text" class="form-control" id="it_item_code" placeholder="CO00001">
+            </div>
+            <br>
+            <div class="col-md-3" id="it_search_btn">
+                <button type="button" class="btn btn-primary">Search</button>
+            </div>
+            <div class="col-md-3" id="it_next-btn">
+                <button type="button" class="btn btn-success">+ New</button>
+                <button type="button" class="btn btn-secondary">Update</button>
+                <button type="button" class="btn btn-warning">Delete</button>
+            </div>
+            <div class="col-md-6">
+                <label for="it_item" class="form-label">Item</label>
+                <input type="text" class="form-control" id="it_item" placeholder="Item's name">
+            </div>
+            <div class="col-md-6">
+                <label for="category" class="form-label">Category</label>
+                <select class="form-select bg-dark-subtle text-black" aria-label="Default select example" id="category">
+                    <option selected>Choose</option>
+                    <option value="1">CPU</option>
+                    <option value="2">Motherboard</option>
+                    <option value="3">RAM</option>
+                    <option value="3">VGA</option>
+                    <option value="3">Storage</option>
+                    <option value="3">Power Supply</option>
+                    <option value="3">Laptop</option>
+                    <option value="3">Monitor</option>
+                    <option value="3">Keyboard</option>
+                    <option value="3">Mouse</option>
+                    <option value="3">Speakers</option>
+                    <option value="3">Others</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label for="it_qty" class="form-label">QTY</label>
+                <input type="number" class="form-control" id="it_qty" placeholder="00">
+            </div>
+            <div class="col-md-6">
+                <label for="it_unit_price" class="form-label">Unit Price</label>
+                <input type="number" class="form-control" id="it_unit_price" placeholder="Rs.00000.00">
+            </div>
+        </form>
+        <table class="table" id="item_table">
+            <thead>
+            <tr>
+                <th scope="col">Item Code</th>
+                <th scope="col">Item</th>
+                <th scope="col">Category</th>
+                <th scope="col">QTY</th>
+                <th scope="col">Unit Price</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">IT000001</th>
+                <td>MILANG KEYBOARD</td>
+                <td>Keyboard</td>
+                <td>79</td>
+                <td>3000.00</td>
+            </tr>
+            <tr>
+                <th scope="row">IT00002</th>
+                <td>8GB RAM GIGABYTE</td>
+                <td>RAM</td>
+                <td>100</td>
+                <td>9000.00</td>
+            </tr>
+            <tr>
+                <th scope="row">IT00003</th>
+                <td>4GB 2050Ti RTX NVDIA</td>
+                <td>VGA</td>
+                <td>45</td>
+                <td>150000.00</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+<!--    order-->
+    <section id="order_section">
+        <div>
+            <img src="asset/img/order.png" alt="Items">
+            <span class="text-center">Orders</span>
+        </div>
+        <h6 class="bg-light text-black">Order search</h6>
+        <form class="row g-3 ">
+            <div class="col-md-6">
+                <label for="or_order_id" class="form-label">Order ID</label>
+                <input type="text" class="form-control" id="or_order_id" placeholder="OR00000">
+            </div>
+            <br>
+            <div class="col-md-3" id="search_btn">
+                <button type="button" class="btn btn-primary">Search</button>
+            </div>
+            <div class="col-md-3" id="next-btn">
+                <button type="button" class="btn btn-success">+ New</button>
+                <button type="button" class="btn btn-secondary">Update</button>
+                <button type="button" class="btn btn-warning">Delete</button>
+            </div>
+            <div class="col-md-6">
+                <label for="item_code" class="form-label">Item Code</label>
+                <input type="text" class="form-control" id="item_code" placeholder="IT000000">
+            </div>
+            <div class="col-md-6">
+                <label for="or_price" class="form-label">Price</label>
+                <input type="number" class="form-control" id="or_price" placeholder="00000.00">
+
+            </div>
+            <div class="col-md-6">
+                <label for="date" class="form-label">Date</label>
+                <label id="date" class="form-label">2000/08/17</label>
+            </div>
+
+        </form>
+        <table class="table" id="order_table">
+            <thead>
+            <tr>
+                <th scope="col">Order ID</th>
+                <th scope="col">Item Code</th>
+                <th scope="col">Price</th>
+                <th scope="col">Date</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">OR00001</th>
+                <td>IT000001</td>
+                <td>200000.00</td>
+                <td>2023.09.03</td>
+
+            </tr>
+            <tr>
+                <th scope="row">OR00002</th>
+                <td>IT000003</td>
+                <td>90000.00</td>
+                <td>2023.09.05</td>
+            </tr>
+            <tr>
+                <th scope="row">OR00002</th>
+                <td>IT000002</td>
+                <td>8000.00</td>
+                <td>2023.09.07</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+<!--    invoice-->
+    <section id="invoice_section">
+        <div>
+            <img src="asset/img/invoice.png" alt="Items">
+            <span class="text-center">Invoice</span>
+        </div>
+        <h6 class="bg-light text-black">Billing</h6>
+        <form class="row g-3 ">
+            <div class="col-md-4">
+                <label for="order_id" class="form-label col-sm-12 col-lg-4">Order ID</label>
+                <label id="order_id" class="form-label col-sm-12 col-lg-4">OR00001</label>
+            </div>
+            <br>
+            <div class="col-md-4 col-lg-4">
+                <label for="customer_ids" class="form-label col-sm-12 col-lg-4">Customer ID</label>
+                <select class="form-select bg-dark-subtle text-black col-sm-12 col-lg-4" aria-label="Default select example" id="customer_ids">
+                    <option selected>Choose</option>
+                    <option value="1">CU00001</option>
+                    <option value="2">CU00002</option>
+                    <option value="2">CU00003</option>
+                    <option value="2">CU00004</option>
+                    <option value="2">CU00005</option>
+                    <option value="2">CU00006</option>
+                </select>
+            </div>
+            <div class="col-md-4 labels">
+                <label for="customer_name" class="form-label col-sm-12 col-lg-4">Customer Name</label>
+                <label id="customer_name" class="form-label col-sm-12 col-lg-4">Mr.Nobody</label>
+            </div>
+            <div class="col-md-4 col-lg-4 ">
+                <label for="item_codes" class="form-label col-sm-12 col-lg-4">Item Code</label>
+                <select class="form-select bg-dark-subtle text-black col-sm-12 col-lg-4" aria-label="Default select example" id="item_codes">
+                    <option selected>Choose</option>
+                    <option value="1">IT00001</option>
+                    <option value="2">IT00002</option>
+                    <option value="2">IT00003</option>
+                    <option value="2">IT00004</option>
+                    <option value="2">IT00005</option>
+                    <option value="2">IT00006</option>
+                </select>
+            </div>
+            <div class="col-md-4 labels">
+                <label for="item" class="form-label col-sm-12 col-lg-4">Item</label>
+                <label id="item" class="form-label col-sm-12 col-lg-4">No Item Select Yet</label>
+            </div>
+            <div class="col-md-4 labels">
+                <label for="unit_price" class="form-label col-sm-12 col-lg-4">Unit Price Rs</label>
+                <label id="unit_price" class="form-label col-sm-12 col-lg-4">0000.00</label>
+            </div>
+            <div class="col-md-3">
+                <label for="qty" class="form-label">QTY</label>
+                <input type="number" class="form-control" id="qty" placeholder="00">
+            </div>
+            <div class="col-md-3 labels">
+                <label for="price" class="form-label col-sm-12 col-lg-4">Price Rs</label>
+                <label id="price" class="form-label col-sm-12 col-lg-4">0000.00</label>
+            </div>
+            <div class="col-md-3 labels">
+                <label for="net_price" class="form-label col-sm-12 col-lg-4">Net Price Rs</label>
+                <label id="net_price" class="form-label col-sm-12 col-lg-4">0000.00</label>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-primary" id="add_cart">Add to Cart</button>
+            </div>
+            <div class="col-md-4">
+                <label for="cash" class="form-label col-sm-12 col-lg-4">Cash Rs</label>
+                <input type="number" class="form-control col-sm-12 col-lg-4" id="cash" placeholder="0000.00">
+            </div>
+            <div class="col-md-4">
+                <label for="balance" class="form-label col-sm-12 col-lg-4 ">Balance Rs</label>
+                <label id="balance" class="form-label col-sm-12 col-lg-4">0000.00</label>
+            </div>
+        </form>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Item Code</th>
+                <th scope="col">Item</th>
+                <th scope="col">One Unit Price</th>
+                <th scope="col">QTY</th>
+                <th scope="col">Price</th>
+                <th scope="col">Remove</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">IT00001</th>
+                <td>4GB RAM</td>
+                <td>5000.00</td>
+                <td>2</td>
+                <td>10000.00</td>
+                <td><Button class="btn btn-warning"> Remove</Button></td>
+
+            </tr>
+            <tr>
+                <th scope="row">IT00006</th>
+                <td>1TB HARD</td>
+                <td>16000.00</td>
+                <td>1</td>
+                <td>16000.00</td>
+                <td><Button class="btn btn-warning"> Remove</Button></td>
+            </tr>
+            <tr>
+                <th scope="row">IT00020</th>
+                <td>Intel i7 12th gen Processor</td>
+                <td>50000.00</td>
+                <td>1</td>
+                <td>50000.00</td>
+                <td><Button class="btn btn-warning"> Remove</Button></td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+
     <div class="row">
         <span class="text-center">©copyright-GamingPC World-2023®</span>
     </div>
 </main>
-<script src="asset/boostrap/bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>
+<script src="asset/lib/jquery.min.js"></script>
+<script src="asset/lib/boostrap/bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>
 <script defer="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="controller/DashboardController.js"></script>
+<script src="asset/js/scripts.js"></script>
 </body>
 </html>
