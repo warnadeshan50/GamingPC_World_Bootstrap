@@ -1,4 +1,7 @@
-$('#dashboard_section').css('display', 'none');
+$('#customer_section').css('display', 'none');
+$('#item_section').css('display', 'none');
+$('#order_section').css('display', 'none');
+$('#invoice_section').css('display', 'none');
 
 $('#about_nav').on('click', () => {
     $('#dashboard_section').css('display', 'block');

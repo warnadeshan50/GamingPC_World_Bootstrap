@@ -31,17 +31,17 @@
             </article>
         </div>
         <form class="col-xl-4 col-md-6 col-sm-8 form-text" id="login_form">
-            <label for="username">Username</label>
-            <input type="text" class="form-control" id="username">
-            <label for="password">Password</label>
-            <input type="password" class="form-control" id="password">
+            <label for="username_txt">Username</label>
+            <input type="text" class="form-control" id="username_txt">
+            <label for="password_txt">Password</label>
+            <input type="password" class="form-control" id="password_txt">
             <br>
-            <button class="btn btn-primary">Login</button>
+            <button type="button" class="btn btn-primary" id="login_btn">Login</button>
             <br>
         <p>
             Don't have an account yet?<br>Sign Up
         </p>
-            <button class="btn btn-secondary">Register</button>
+            <button type="button" class="btn btn-secondary">Register</button>
         </form>
     </section>
     <div class="row">
@@ -51,6 +51,8 @@
     <span class="text-center">©copyright-GamingPC World-2023®</span>
     </div>
 </main>
+<script src="asset/lib/jquery.min.js"></script>
 <script src="asset/lib/boostrap/bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>
+<script src="controller/IndexController.js"></script>
 </body>
 </html>
