@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="asset/lib/normalize.css">
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-minimal@4/minimal.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
     <link rel="stylesheet" href="asset/css/header_nav_body.css">
     <link rel="stylesheet" href="asset/css/invoice_page.css">
     <link rel="stylesheet" href="asset/css/search_new_update_delete_btn.css">
@@ -92,14 +96,18 @@
             <span class="text-center">Customers</span>
         </div>
         <h6 class="bg-light text-black">Customer search</h6>
+        <div class="col-md-9 mx-auto">
+            <input type="text" class="form-control" id="customer_search_box" placeholder="Search with id, name or address..">
+            <div class="col col-xxl-11 col-xl-11 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto">
+                <table class="table table-info table-sm table-hover table-borderless">
+                    <tbody id="customer_search_tbl_body"></tbody>
+                </table>
+            </div>
+        </div>
         <form class="row g-3 ">
             <div class="col-md-6">
                 <label for="customer_id_txt" class="form-label">Customer ID</label>
                 <input type="text" class="form-control" id="customer_id_txt" placeholder="CU0000">
-            </div>
-
-            <div class="col-md-3" id="cu_search_btn">
-                <button type="button" class="btn btn-primary">Search</button>
             </div>
             <div class="col-md-3" id="cu_next-btn">
                 <button type="button" class="btn btn-success">+ New</button>
@@ -147,8 +155,8 @@
         <h6 class="bg-light text-black">Item search</h6>
         <form class="row g-3 ">
             <div class="col-md-6">
-                <label for="it_item_code" class="form-label">Item Code</label>
-                <input type="text" class="form-control" id="it_item_code" placeholder="CO00001">
+                <label for="it_item_code_txt" class="form-label">Item Code</label>
+                <input type="text" class="form-control" id="it_item_code_txt" placeholder="IT00000">
             </div>
             <br>
             <div class="col-md-3" id="it_search_btn">
@@ -160,12 +168,12 @@
                 <button type="button" class="btn btn-warning">Delete</button>
             </div>
             <div class="col-md-6">
-                <label for="it_item" class="form-label">Item</label>
-                <input type="text" class="form-control" id="it_item" placeholder="Item's name">
+                <label for="it_item_name_txt" class="form-label">Item</label>
+                <input type="text" class="form-control" id="it_item_name_txt" placeholder="Item's name">
             </div>
             <div class="col-md-6">
-                <label for="category" class="form-label">Category</label>
-                <select class="form-select bg-dark-subtle text-black" aria-label="Default select example" id="category">
+                <label for="category_cmb" class="form-label">Category</label>
+                <select class="form-select bg-dark-subtle text-black" aria-label="Default select example" id="category_cmb">
                     <option selected>Choose</option>
                     <option value="1">CPU</option>
                     <option value="2">Motherboard</option>
@@ -182,12 +190,12 @@
                 </select>
             </div>
             <div class="col-md-6">
-                <label for="it_qty" class="form-label">QTY</label>
-                <input type="number" class="form-control" id="it_qty" placeholder="00">
+                <label for="it_qty_txt" class="form-label">QTY</label>
+                <input type="number" class="form-control" id="it_qty_txt" placeholder="00">
             </div>
             <div class="col-md-6">
-                <label for="it_unit_price" class="form-label">Unit Price</label>
-                <input type="number" class="form-control" id="it_unit_price" placeholder="Rs.00000.00">
+                <label for="it_unit_price_txt" class="form-label">Unit Price</label>
+                <input type="number" class="form-control" id="it_unit_price_txt" placeholder="Rs.00000.00">
             </div>
         </form>
         <table class="table" id="item_table">
@@ -200,29 +208,7 @@
                 <th scope="col">Unit Price</th>
             </tr>
             </thead>
-            <tbody>
-            <tr>
-                <th scope="row">IT000001</th>
-                <td>MILANG KEYBOARD</td>
-                <td>Keyboard</td>
-                <td>79</td>
-                <td>3000.00</td>
-            </tr>
-            <tr>
-                <th scope="row">IT00002</th>
-                <td>8GB RAM GIGABYTE</td>
-                <td>RAM</td>
-                <td>100</td>
-                <td>9000.00</td>
-            </tr>
-            <tr>
-                <th scope="row">IT00003</th>
-                <td>4GB 2050Ti RTX NVDIA</td>
-                <td>VGA</td>
-                <td>45</td>
-                <td>150000.00</td>
-            </tr>
-            </tbody>
+            <tbody id="item_table_body"></tbody>
         </table>
     </section>
 
@@ -417,8 +403,10 @@
 <script src="asset/lib/jquery.min.js"></script>
 <script src="asset/lib/boostrap/bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>
 <script type="module" src="controller/CustomerController.js"></script>
+<script type="module" src="controller/ItemController.js"></script>
 <script defer="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 <script src="controller/DashboardController.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="asset/js/scripts.js"></script>
 </body>
