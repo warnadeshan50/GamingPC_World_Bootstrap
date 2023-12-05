@@ -153,15 +153,23 @@
             <span class="text-center">Items</span>
         </div>
         <h6 class="bg-light text-black">Item search</h6>
+        <div class="col-md-9 mx-auto">
+            <input type="text" class="form-control" id="item_search_box" placeholder="Search with Item Code, Item or Category..">
+            <div class="col col-xxl-11 col-xl-11 col-lg-11 col-md-11 col-sm-11 col-11 mx-auto">
+                <table class="table table-info table-sm table-hover table-borderless">
+                    <tbody id="item_search_tbl_body"></tbody>
+                </table>
+            </div>
+        </div>
         <form class="row g-3 ">
             <div class="col-md-6">
                 <label for="it_item_code_txt" class="form-label">Item Code</label>
                 <input type="text" class="form-control" id="it_item_code_txt" placeholder="IT00000">
             </div>
             <br>
-            <div class="col-md-3" id="it_search_btn">
-                <button type="button" class="btn btn-primary">Search</button>
-            </div>
+<!--            <div class="col-md-3" id="it_search_btn">-->
+<!--                <button type="button" class="btn btn-primary">Search</button>-->
+<!--            </div>-->
             <div class="col-md-3" id="it_next-btn">
                 <button type="button" class="btn btn-success">+ New</button>
                 <button type="button" class="btn btn-secondary">Update</button>
@@ -298,12 +306,12 @@
                 <label for="customer_ids" class="form-label col-sm-12 col-lg-4">Customer ID</label>
                 <select class="form-select bg-dark-subtle text-black col-sm-12 col-lg-4" aria-label="Default select example" id="customer_ids">
                     <option selected>Choose</option>
-                    <option value="1">CU00001</option>
-                    <option value="2">CU00002</option>
-                    <option value="2">CU00003</option>
-                    <option value="2">CU00004</option>
-                    <option value="2">CU00005</option>
-                    <option value="2">CU00006</option>
+<!--                    <option value="1">CU00001</option>-->
+<!--                    <option value="2">CU00002</option>-->
+<!--                    <option value="2">CU00003</option>-->
+<!--                    <option value="2">CU00004</option>-->
+<!--                    <option value="2">CU00005</option>-->
+<!--                    <option value="2">CU00006</option>-->
                 </select>
             </div>
             <div class="col-md-4 labels">
@@ -314,12 +322,12 @@
                 <label for="item_codes" class="form-label col-sm-12 col-lg-4">Item Code</label>
                 <select class="form-select bg-dark-subtle text-black col-sm-12 col-lg-4" aria-label="Default select example" id="item_codes">
                     <option selected>Choose</option>
-                    <option value="1">IT00001</option>
-                    <option value="2">IT00002</option>
-                    <option value="2">IT00003</option>
-                    <option value="2">IT00004</option>
-                    <option value="2">IT00005</option>
-                    <option value="2">IT00006</option>
+<!--                    <option value="1">IT00001</option>-->
+<!--                    <option value="2">IT00002</option>-->
+<!--                    <option value="2">IT00003</option>-->
+<!--                    <option value="2">IT00004</option>-->
+<!--                    <option value="2">IT00005</option>-->
+<!--                    <option value="2">IT00006</option>-->
                 </select>
             </div>
             <div class="col-md-4 labels">
@@ -404,6 +412,7 @@
 <script src="asset/lib/boostrap/bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>
 <script type="module" src="controller/CustomerController.js"></script>
 <script type="module" src="controller/ItemController.js"></script>
+<script type="module" src="controller/InvoiceController.js"></script>
 <script defer="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 <script src="controller/DashboardController.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>

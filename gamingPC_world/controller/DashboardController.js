@@ -41,4 +41,5 @@ $('#invoice_nav').on('click', () => {
     $('#item_section').css('display', 'none');
     $('#order_section').css('display', 'none');
     $('#invoice_section').css('display', 'block');
+
 });

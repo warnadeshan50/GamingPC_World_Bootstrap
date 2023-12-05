@@ -1,6 +1,5 @@
-import { item_db} from '../DB/db.js';
+import {customer_db, item_db} from '../DB/db.js';
 import {ItemModel} from '../model/ItemModel.js';
-
 
 var c_n;
 const cleanInputsItems = () => {
@@ -163,5 +162,22 @@ $("#it_next-btn>button[type='button']").eq(1).on("click", () => {
 
     } else {
         toastr.error('Invalid Item Code');
+    }
+});
+$('#item_search_box').on('input', () => {
+    let search_term = $('#item_search_box').val();
+    if(search_term){
+        $('#item_search_tbl_body').empty();
+        let results = item_db.filter((item) =>
+            item.item_code.toLowerCase().startsWith(search_term.toLowerCase()) ||
+            item.item_name.toLowerCase().startsWith(search_term.toLowerCase()) ||
+            item.item_category.startsWith(search_term.toLowerCase()));
+        results.map((item, index) => {
+            let record = `<tr><td class="item_code">${item.item_code}</td><td class="item_name">${item.item_name}</td>
+                      <td class="item_category">${item.item_category}</td><td class="qty">${item.qty}</td><td class="unit_price">${item.unit_price}</td></tr>`;
+            $("#item_search_tbl_body").append(record);
+        });
+    }else{
+        $('#item_search_tbl_body').empty();
     }
 });
